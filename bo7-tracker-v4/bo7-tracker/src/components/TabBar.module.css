@@ -1,0 +1,60 @@
+.wrap {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 6px;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  position: relative;
+  transition: color 0.2s, border-color 0.2s;
+  overflow: hidden;
+}
+
+.tab:hover {
+  color: var(--text2);
+  border-color: var(--border2);
+}
+
+.active {
+  background: rgba(255,255,255,0.03);
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.label {
+  font-size: 13px;
+}
+
+.indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 1px;
+}
+
+@media (max-width: 400px) {
+  .label { font-size: 11px; letter-spacing: 2px; }
+}
